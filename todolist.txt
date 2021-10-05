@@ -1,0 +1,55 @@
+#Dan s todo list
+#VAE:
+  #todo: put model files in google drive
+  #todo: add weight for different loss                                                  done
+  #todo: add testing algorithm                                                          done
+  #todo: write decoder.                                                                 done
+  #todo: restructure code                                                               doing
+  #todo: make sure the network parameter can be saved and reloaded from goolge drive    done only in cnn
+  #todo: figure out how to use tensorboard to tract the parameters                      to do
+  #todo: test the network  test the loss function                                       done
+  #todo: test difference of torch.mean and torch.sum                                    to do
+
+#classic attack:
+  #todo: check out the tutorial code for attack.                                        done
+  #todo: implement FGSM and PGD for VAE L-inifite norm.                                 done
+  #todo: figure out the gradient propogation of BCE ,
+    i.e. why cant it compute the gradient of second argument?                           to do
+  #note: attack on fc network is not that effective.
+  #todo: test attack on conv network, and on cifar-10 dataset                           to do
+  #todo: figure out how implement for l2 norm and l0 norm.                              jakob is working on it maybe
+  #todo: normalise input?                                                               to do
+  #todo: fix random seed                                                                done seed 2020
+
+#Minimax:
+  #todo: implementation                                                                 done
+  #todo: make sure the grad in the inner problem
+     doesnt affect the outer problem. -> clearing the grad                              done
+  #note: minimax loss is not reduced during training on fc network mnist    bug spotted and fixed,       done
+  #todo: test minimax loss on conv network.                                             to do
+  #todo: reduce the loss somehow.                                                       done
+  #todo: experienment with different starting point                                     to do
+
+#Replay buffer
+  #todo: implementation:                                                                    done
+  #todo:  figure out the proper parameters.                                                 to do
+  #todo: adaptation for multi adversarial inputs.                                           done kinda
+  #todo: add comments for readability                                                       doing
+  #todo: experiment with whether or not to train for one step after samples are collected   to do
+  #todo: implement normal replay buffer                                                     to do
+  #todo: testing                                                                            #top priority
+  # todo: find a priority setting to mix all different buffers together                     #next step
+  # todo: make it so that u can specify how many adversarial there is.                      important!
+  # todo: use huber loss and reduce mean??                                                  important!
+  # todo:somehow update the priority of more valuable set so it can be oversampled but still useful. important!
+
+#restructure code:
+  #todo: write model class                                                                  done
+  #todo: write train class (callable main fuction with args.parse)
+    report train score and validation score.                                                done
+  #todo: write test class                                                                   done
+  #todo: add priority replay buffer with multiple adv into training options.                doing
+  #todo: make it so that validation score also can calculates all sorts of attack.          done
+  #todo: make saparate train and validation set test set                                    done
+  #todo: save the hyperparameter with the result.                                to do probably with ray? or lighting
+                                                                                   #top priority
